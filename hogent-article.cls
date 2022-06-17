@@ -286,7 +286,7 @@
 
     \ifx\@supervisor\@empty\else
       \ifx\@supervisor@role\@empty
-        \if@english Supervisor: \else Begeleider:\fi
+        \if@english Supervisor: \else Begeleider: \fi
       \else
         \@supervisor@role:
       \fi
