@@ -60,7 +60,7 @@ Het sjabloon heeft momenteel volgende documentclass-opties:
 
 ## Commando's voor document-metadata
 
-In het sjabloon worden een aantal commando's ge(her)definieerd voor het specifiëren van metadata die op een specifieke manier opgemaakt wordt in de PDF. De meeste zijn optioneel, tenzij anders aangegeven.
+In het sjabloon worden een aantal commando's ge(her)definieerd voor het specifiëren van metadata die op een specifieke manier opgemaakt wordt in de PDF. Je gebruikt al deze commando's in de preamble. De meeste zijn optioneel, tenzij anders aangegeven.
 
 - `\academicyear`: het academiejaar waarin het document geschreven is of van toepassing op is. Indien niet opgegeven wordt `\today` gebruikt.
 - `\assignmenttype`: het soort opdracht waarvoor het document geschreven wordt, bv.
@@ -98,7 +98,7 @@ In het sjabloon worden een aantal commando's ge(her)definieerd voor het specifi�
     - `\colorlet{links}{hogent-grey}`
 - In dit sjabloon wordt de APA-stijl gebruikt via de `biblatex` package. Gebruik dus `biber` voor het compileren van de bibliografie en volgende commando's om te verwijzen naar bronnen:
     - `\textcite{AuthorYear}` voor een referentie van de vorm "Auteur (jaar)"
-    - `\autocite{AuthorYear}` voor een referentie van de vorm "(Auteur jaar)"
+    - `\autocite{AuthorYear}` voor een referentie van de vorm "(Auteur, jaar)"
 
 ## Vragen, problemen, verbeteringen
 
