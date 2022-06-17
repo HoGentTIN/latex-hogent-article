@@ -18,6 +18,12 @@ Om dit sjabloon te kunnen gebruiken, heb je het volgende nodig:
 - XeLaTeX als compiler (o.a. voor Unicode-ondersteuning)
 - Biber voor het beheer van de bibliografie (o.a. voor Unicode-ondersteuning en de APA referentiestijl)
 
+Om zelf een document aan te maken, gebaseerd op deze stijl, heb je volgende bestanden nodig:
+
+- `hogent-article.cls` (documentclass-definitie)
+- `img/HOGENT_Logo_Pos_rgb.png` (logo)
+- Je kan starten met een van de voorbeeld .tex-bestanden en die aanpassen naar je voorkeur.
+
 ## HOGENT huisstijl
 
 De [HOGENT huisstijl](https://hnet.hogent.be/themas/communicatie/huisstijl-logo-s-en-sjablonen/) kenmerkt zich o.a. door:
