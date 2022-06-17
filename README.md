@@ -7,6 +7,8 @@ Het sjabloon is geïnspireerd door:
 - Pieter Van der Kloet's [thesis-sjabloon](https://github.com/pvdk/hogent-latex-thesis) (wordt nu [hier verder onderhouden](https://github.com/HoGentTIN/hogent-latex-thesis))
 - [Het artikelsjabloon](https://www.overleaf.com/latex/templates/publications-of-the-astronomical-society-of-australia/nbjxzvhrrgbx) van de Astronomical Society of Australia
 
+![Voorbeeld van de artikelstijl](img/example-document.png)
+
 ## Aan de slag
 
 Om dit sjabloon te kunnen gebruiken, heb je het volgende nodig:
