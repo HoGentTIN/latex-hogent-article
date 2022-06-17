@@ -11,4 +11,3 @@ Om dit te laten werken moet je:
     ```console
     pandoc -o pandoc/voorbeeld-pandoc.pdf --pdf-engine xelatex --from markdown --template hogent-article pandoc/voorbeeld-pandoc.md
     ```
-
