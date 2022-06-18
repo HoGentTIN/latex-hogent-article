@@ -5,6 +5,9 @@ $else$
 \documentclass{hogent-article}
 $endif$
 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 $if(bibliography)$\addbibresource{$bibliography$}$endif$
 
 $if(studyprogramme)$\studyprogramme{$studyprogramme$}$endif$
