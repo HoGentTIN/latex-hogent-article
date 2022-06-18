@@ -76,7 +76,7 @@ In het sjabloon worden een aantal commando's ge(her)definieerd voor het specifi√
     - Wanneer je geen email-adressen opgeeft, zal er een waarschuwing verschijnen bij compileren.
 - `\keywords`: enkele sleutelwoorden die het onderwerp van het document beschrijven.
 - `\projectrepo`: URL van de Github-repository waar projectcode wordt bijgehouden
-- `\specialization`: Specialisatierichting waarbinnen de opdracht of de inhoud van het document zich situeert. In toegepaste informatica zijn dat bv.:
+- `\specialisation`: Specialisatierichting waarbinnen de opdracht of de inhoud van het document zich situeert. In toegepaste informatica zijn dat bv.:
     - Mobile \& Enterprise development
     - AI \& Data Engineering
     - Functional \& Business Analysis
@@ -94,7 +94,7 @@ In het sjabloon worden een aantal commando's ge(her)definieerd voor het specifi√
 
 - Als je bij het begin van het document een samenvatting opgeeft met de `abstract` environment, dan is het niet nodig om nog apart `\maketitle` te gebruiken.
     - De titel van het document wordt gegenereerd samen met de abstract.
-    - Als je geen abstract opgeeft, dan worden `\keyword`s en `\specialization` niet getoond.
+    - Als je geen abstract opgeeft, dan worden `\keyword`s en `\specialisation` niet getoond.
 - Je kan de kleur van de titels of hyperlinks wijzigen door deze in de preamble te defini√´ren, vb:
     - `\colorlet{title}{hogent-darkgreen}`
     - `\colorlet{links}{hogent-grey}`

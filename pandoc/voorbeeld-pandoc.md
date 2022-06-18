@@ -16,7 +16,7 @@ academicyear: 2022-2023
 
 abstract: |
   Wij presenteren het éérste onderzoek naar radiofrequente interferentie (RFI) op de toekomstige locatie van de laagfrequente Square Kilometre Array (SKA), het Murchison Radio-astronomie Observatorium (MRO), dat de RFI zowel in de tijd als ruimtelijk oplost.  Het onderzoek wordt uitgevoerd in een frequentiebereik van 1 MHz binnen de FM-band, ontworpen om de dichtstbijzijnde en sterkste FM-zenders van de MRO (gevestigd in Geraldton, op ongeveer 300 km afstand) te omvatten.
-specialization: Mobile & Enterprise development
+specialisation: Mobile & Enterprise development
 keywords: Scheme, World Wide Web, $\lambda$-calculus
 ...
 

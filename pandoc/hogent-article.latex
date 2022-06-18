@@ -25,7 +25,7 @@ $endfor$
 $if(supervisor)$\supervisor{$supervisor$}$endif$
 $if(projectrepo)$\projectrepo{$projectrepo$}$endif$
 
-$if(specialization)$\specialization{$specialization$}$endif$
+$if(specialisation)$\specialisation{$specialisation$}$endif$
 $if(keywords)$\keywords{$keywords$}$endif$
 
 \begin{document}

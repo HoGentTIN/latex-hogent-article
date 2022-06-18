@@ -8,7 +8,7 @@
 %%
 %% - hogentreport.cls - HOGENT report/thesis class by Pieter van der Kloet
 %%   (pvdkloet at gmail.com)
-%% - cup-journal.cos - Cambridge University Press article class by Paul
+%% - cup-journal.cls - Cambridge University Press article class by Paul
 %%   Gessler (paul.gessler at overleaf.com)
 %% -----------------------------------------------------------------------------
 
@@ -60,7 +60,7 @@
 \let\@supervisor\@empty      % specifically for bachelor thesis proposal
 \let\@supervisor@role\@empty
 \let\@projectrepo\@empty     % e.g. https://github.com/hogenttin/some-repo
-\let\@specialization\@empty  % e.g. System and Network Admin, Data engineering
+\let\@specialisation\@empty  % e.g. System and Network Admin, Data engineering
 \let\@keywords\@empty
 
 \newcommand{\studyprogramme}[1]{\def\@studyprogramme{#1}}
@@ -73,7 +73,7 @@
 }
 \newcommand{\projectrepo}[1]{\def\@projectrepo{#1}}
 
-\newcommand{\specialization}[1]{\def\@specialization{#1}}
+\newcommand{\specialisation}[1]{\def\@specialisation{#1}}
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
 
 \@onlypreamble\studyprogramme
@@ -327,9 +327,9 @@
       \protecting{\BODY}%
       \end{oldabstract}%
       \begingroup
-      \ifx\@specialization\@empty\else
+      \ifx\@specialisation\@empty\else
         \small\bfseries\if@english Specialisation: \else Keuzerichting: \fi
-        \normalfont\@specialization
+        \normalfont\@specialisation
       \fi
 
       \ifx\@keywords\@empty\else
