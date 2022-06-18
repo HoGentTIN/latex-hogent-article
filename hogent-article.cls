@@ -414,14 +414,14 @@
 % Footers
 \fancyfoot[L]{\small\bfseries\@studyprogramme}%
 \fancyfoot[C]{}
-\fancyfoot[R]{\includegraphics[height=1.1cm]{img/HOGENT_Logo_Pos_rgb.png}}%
+\fancyfoot[R]{\includegraphics[height=1.1cm]{HOGENT_Logo_Pos_rgb.png}}%
 
 % First page
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \fancyfoot[L]{\small\bfseries\@studyprogramme}%
   \fancyfoot[C]{}
-  \fancyfoot[R]{\includegraphics[height=1.1cm]{img/HOGENT_Logo_Pos_rgb.png}}%
+  \fancyfoot[R]{\includegraphics[height=1.1cm]{HOGENT_Logo_Pos_rgb.png}}%
 }
 
 \renewcommand{\headrulewidth}{0pt}% % No header rule
@@ -430,6 +430,7 @@
 %% -----------------------------------------------------------------------------
 %% Packages for general use
 \RequirePackage{graphicx}
+\graphicspath{{img/}}
 \RequirePackage{amsmath}
 \RequirePackage{eurosym}
 \RequirePackage{url}
