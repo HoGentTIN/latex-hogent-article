@@ -49,16 +49,18 @@ De [HOGENT huisstijl](https://hnet.hogent.be/themas/communicatie/huisstijl-logo-
 
 ## Documentclass-opties
 
-Het sjabloon is gebaseerd op het standaard LaTeX `article`-sjabloon, met opties `a4paper`, `10pt` en `twocolumn`.
+Het sjabloon is gebaseerd op het standaard LaTeX `article`-sjabloon, met opties `a4paper`, `10pt`.
 
 Het sjabloon heeft momenteel volgende documentclass-opties:
 
-| Optie     | Effect                         |
-| :-------- | :----------------------------- |
-| `dutch`   | Document in het Nederlands(\*) |
-| `english` | Document in het Engels         |
+| Optie       | Effect                             |
+| :---------- | :--------------------------------- |
+| `dutch`     | Inhoud in het Nederlands(\*)       |
+| `english`   | Inhoud in het Engels               |
+| `onecolumn` | Pagina-indeling met 1 kolom        |
+| `twocolumn` | Pagina-indeling met 2 kolommen(\*) |
 
-(*) Het is niet verplicht dit op te geven. Als er geen taal is meegegeven als documentclass-optie, wordt Nederlands verondersteld.
+(*) Indien opties niet expliciet zijn opgegeven, wordt deze als standaard ingesteld.
 
 ## Commando's voor document-metadata
 
@@ -95,6 +97,7 @@ In het sjabloon worden een aantal commando's ge(her)definieerd voor het specifiÃ
 - Als je bij het begin van het document een samenvatting opgeeft met de `abstract` environment, dan is het niet nodig om nog apart `\maketitle` te gebruiken.
     - De titel van het document wordt gegenereerd samen met de abstract.
     - Als je geen abstract opgeeft, dan worden `\keyword`s en `\specialisation` niet getoond.
+    - **Let op!** Als je *geen* abstract opgeeft, dan werkt de `onecolumn` option niet goed.
 - Je kan de kleur van de titels of hyperlinks wijzigen door deze in de preamble te definiÃ«ren, vb:
     - `\colorlet{title}{hogent-darkgreen}`
     - `\colorlet{links}{hogent-grey}`

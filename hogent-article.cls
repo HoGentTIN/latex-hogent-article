@@ -15,8 +15,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \def\@classname{hogent-article}
 \ProvidesClass{hogent-article}
-  [2022/06/17 v2.0 Artikel voor gebruik in de opleiding toegepaste informatica aan HOGENT]
-\LoadClass[10pt,a4paper,twocolumn]{article}
+  [2022/09/01 v2.1 Artikel voor gebruik in de opleiding toegepaste informatica aan HOGENT]
+\LoadClass[10pt,a4paper]{article}
 
 %% -----------------------------------------------------------------------------
 %% Processing Package options
@@ -30,6 +30,13 @@
 \DeclareOptionX{english}{\@dutchfalse\@englishtrue}
 \ExecuteOptionsX{dutch} %% Default language
 
+% Number of columns: onecolumn/twocolumn
+\newif\if@onecolumn
+\newif\if@twocolumn
+\DeclareOptionX{onecolumn}{\@onecolumntrue\@twocolumnfalse}
+\DeclareOptionX{twocolumn}{\@onecolumnfalse\@twocolumntrue}
+\ExecuteOptionsX{twocolumn}
+
 %% Pass unknown options to the parent class (article)
 \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptionsX\relax
@@ -40,7 +47,7 @@
 %% Dutch is the default language, but this can be changed to English by
 %% specifying the 'english' option to the document class
 \if@english
-    \RequirePackage[main=english]{babel}
+    \RequirePackage[english]{babel}
     \RequirePackage[backend=biber,style=apa]{biblatex}
     \DeclareLanguageMapping{english}{british-apa}
 \else
@@ -319,28 +326,38 @@
 \def\endabstract{\endhga@abstract@box}
 \let\oldabstract\abstract
 \let\endoldabstract\endabstract
-\RenewEnviron{abstract}{%
-  \twocolumn[%
-    \begin{@twocolumnfalse}
-      \maketitle%
-      \begin{oldabstract}%
-      \protecting{\BODY}%
-      \end{oldabstract}%
-      \begingroup
-      \ifx\@specialisation\@empty\else
-        \small\bfseries\if@english Specialisation: \else Keuzerichting: \fi
-        \normalfont\@specialisation
-      \fi
+\newcommand{\makeabstract}{%
+  \maketitle%
+  \begin{oldabstract}%
+  \protecting{\BODY}%
+  \end{oldabstract}%
+  \begingroup
+  \ifx\@specialisation\@empty\else
+    \noindent\small\bfseries\if@english Specialisation: \else Keuzerichting: \fi
+    \normalfont\@specialisation
+  \fi
+  \endgroup
 
-      \ifx\@keywords\@empty\else
-        \bfseries\if@english Keywords: \else Sleutelwoorden: \fi
-        \normalfont\@keywords
-      \fi
-      \endgroup
-      \bigskip
-      \hrule
-      \bigskip
-    \end{@twocolumnfalse}]}
+  \begingroup
+  \ifx\@keywords\@empty\else
+    \noindent\small\bfseries\if@english Keywords: \else Sleutelwoorden: \fi
+    \normalfont\@keywords
+  \fi
+  \endgroup
+  \bigskip
+  \hrule
+  \bigskip
+}
+\RenewEnviron{abstract}{%
+  \if@twocolumn
+    \twocolumn[%
+    \begin{@twocolumnfalse}
+      \makeabstract
+    \end{@twocolumnfalse}]
+  \else
+    \makeabstract
+  \fi
+}
 
 %% -----------------------------------------------------------------------------
 %% Heading and toc format
