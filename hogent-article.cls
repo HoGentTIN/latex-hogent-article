@@ -18,6 +18,16 @@
   [2022/09/01 v2.1 Artikel voor gebruik in de opleiding toegepaste informatica aan HOGENT]
 \LoadClass[10pt,a4paper]{article}
 
+%% Check compiler - issue an error if XeLaTeX was not used
+\RequirePackage{ifxetex}
+
+\ifxetex
+\else
+  \ClassError{\@classname}
+    {Incompatible LaTeX compiler was used!}
+    {Please use XeLaTeX.}
+\fi
+
 %% -----------------------------------------------------------------------------
 %% Processing Package options
 
@@ -40,6 +50,7 @@
 %% Pass unknown options to the parent class (article)
 \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptionsX\relax
+
 
 %% -----------------------------------------------------------------------------
 %% Language selection
