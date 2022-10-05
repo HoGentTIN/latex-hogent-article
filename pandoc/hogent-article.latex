@@ -1,12 +1,16 @@
 $-- Pandoc style template
 $if(language)$
-\documentclass[$language$]{hogent-article}
+\documentclass[$language$,onecolumn]{hogent-article}
 $else$
-\documentclass{hogent-article}
+\documentclass[onecolumn]{hogent-article}
 $endif$
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
 
 $if(bibliography)$\addbibresource{$bibliography$}$endif$
 
